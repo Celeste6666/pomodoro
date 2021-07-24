@@ -1,4 +1,4 @@
-[GitHub Page](https://celeste6666.github.io/pomodoro/view/index.js)
+[GitHub Page](https://celeste6666.github.io/pomodoro/view/index.html)
 
 設計圖參考來源：[何田-The F2E 2nd 第一關](https://challenge.thef2e.com/user/1989?schedule=2729#works-2729)
 
