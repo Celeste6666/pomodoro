@@ -1,0 +1,98 @@
+.timer_clock {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+}
+
+.start .timer_clock {
+  width: 230px;
+  height: 230px;
+}
+
+.timer_clock-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  position: relative;
+  background-color: var(--main-color);
+}
+
+.start .timer_clock-particle {
+  background-color: var(--main-color);
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  animation: particleAnimation linear infinite ;
+  -webkit-animation: particleAnimation linear infinite ;
+}
+
+@keyframes particleAnimation {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 100vh;
+  }
+}
+
+.timer-icons i:nth-child(2) {
+  transform: translateX(-40px);
+}
+
+body.start {
+  background-color: #FFF;
+  position: relative;
+  overflow: hidden;
+  filter: url(#goo);
+}
+
+body.start::before,
+body.start::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 300%;
+  height: 80px;
+  background-image: url(../img/wave.png);
+  background-size: contain;
+  background-repeat: repeat-x;
+  animation: waveAnimation linear infinite alternate-reverse;
+  -webkit-animation: waveAnimation linear infinite alternate-reverse;
+}
+
+
+body.start::before {
+  width: 500%;
+  background-position: 10% 10px;
+  animation-duration: 150s;
+}
+
+body.start::after {
+  transform: rotateY(180deg);
+  background-position: 200% 10px;
+  opacity: .3;
+  animation-duration: 100s;
+}
+
+
+
+@keyframes waveAnimation {
+  0% {
+    background-position: 10% 10px;
+  }
+
+  100% {
+    background-position: 300% 0px;
+  }
+}
+
+.icon-rotate {
+  transform: rotate(180deg);
+}
